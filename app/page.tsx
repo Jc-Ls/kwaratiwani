@@ -23,31 +23,29 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-[85vh] py-24 px-6 text-center overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center min-h-[85vh] py-24 px-6 text-center bg-brand-black overflow-hidden">
       
       {/* Background Image Carousel */}
       {heroImages.map((src, index) => (
         <div
           key={src}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out bg-no-repeat bg-center ${
             index === currentImage ? "opacity-100" : "opacity-0"
-          }`}
+          } bg-contain md:bg-cover`}
           style={{
             backgroundImage: `url(${src})`,
-            backgroundSize: "cover",
-            backgroundPosition: "top center",
           }}
         />
       ))}
 
-      {/* Dark Overlay (Crucial: Ensures the text stays readable over any image) */}
-      <div className="absolute inset-0 bg-black/70 z-10" />
+      {/* Stronger Dark Overlay to fix text clashing */}
+      <div className="absolute inset-0 bg-black/80 z-10" />
 
       {/* Hero Content */}
       <div className="relative z-20 max-w-4xl mx-auto space-y-10 mt-10">
         
         {/* Headline */}
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white drop-shadow-md">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg">
           Kwara Ti Wa Ni
         </h1>
 
@@ -57,13 +55,13 @@ export default function Home() {
         </p>
 
         {/* Name Line */}
-        <div className="inline-block border-y-2 border-brand-red py-4 my-8">
+        <div className="inline-block border-y-2 border-brand-red py-4 my-8 bg-black/30 px-6 rounded-md backdrop-blur-sm">
           <p className="text-lg md:text-xl font-bold tracking-widest text-white uppercase drop-shadow-sm">
             Engr. Olufemi Sanni, FNICE, FNSE — <span className="text-brand-red">ARABA</span>
           </p>
         </div>
 
-        {/* Action Buttons (Colors adjusted to pop against the dark background) */}
+        {/* Action Buttons */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 max-w-2xl mx-auto">
           <Link 
             href="/about" 
