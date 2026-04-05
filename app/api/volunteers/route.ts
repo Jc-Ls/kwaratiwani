@@ -16,15 +16,16 @@ export async function POST(request: NextRequest) {
     }
 
     // Insert into database
-    const result = await db
+        const result = await db
       .insert(volunteers)
       .values({
         fullName: data.fullName,
-        phone: data.phone,
-        email: data.email,
+        phoneNumber: data.phone,   // <-- FIXED: Changed 'phone' to 'phoneNumber'
+        emailAddress: data.email,  // <-- FIXED: Changed 'email' to 'emailAddress'
         lga: data.lga,
         supportType: data.supportType,
       })
+
       .returning();
 
     // TODO: Send email notification to admin
