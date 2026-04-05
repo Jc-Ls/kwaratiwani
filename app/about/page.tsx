@@ -63,7 +63,7 @@ export default function About() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-brand-black mb-4">Early Life & Education</h2>
             <p className="mb-4">
-              Born on September 4, 1962, Sanni’s passion for development was inherited from his father, who managed the defunct Tate and Lyle FC in Ilorin. He pursued his professional foundation at the University of Ilorin, where he earned a B.Eng. in Civil Engineering. He later expanded his horizons internationally, establishing business interests in Toronto, Canada, before returning to focus on Nigeria’s industrial and media landscapes.
+              Born on September 4, 1964, Sanni’s passion for development was inherited from his father, who managed the defunct Tate and Lyle FC in Ilorin. He pursued his professional foundation at the University of Ilorin, where he earned a B.Eng. in Civil Engineering. He later expanded his horizons internationally, establishing business interests in Toronto, Canada, before returning to focus on Nigeria’s industrial and media landscapes.
             </p>
             <p>
               Before deepening his footprint in Nigeria, he established business roots in Canada through TECHNOplus Communications Inc. in Toronto, gaining global exposure that continues to influence his development approach.
