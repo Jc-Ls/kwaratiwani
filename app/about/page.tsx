@@ -94,10 +94,14 @@ export default function About() {
             <h2 className="text-2xl md:text-3xl font-bold text-brand-black mb-4 underline decoration-brand-red decoration-2 underline-offset-8">
               Social Impact & Philanthropy
             </h2>
-            {/* THIS IS THE SPECIFIC PARAGRAPH YOU CIRCLED */}
+                        {/* THIS IS THE SPECIFIC PARAGRAPH YOU CIRCLED */}
             <p className="mb-6 text-gray-700 leading-relaxed font-medium">
-              Sanni is a major advocate for youth development, famously stating that<br> <span className="italic">"Youths shouldn't wait for the perfect moment to start."</span>
+              Sanni is a major advocate for youth development, famously stating that:
+              <span className="block mt-2 italic font-bold text-brand-black">
+                "Youths shouldn't wait for the perfect moment to start."
+              </span>
             </p>
+
             <ul className="space-y-4">
               <li>
                 <strong className="text-brand-black text-xl">• Sports:</strong> He chairs the Araba Football Club, a scouting and developmental platform for young athletic talent.
