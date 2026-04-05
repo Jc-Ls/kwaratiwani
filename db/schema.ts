@@ -1,4 +1,3 @@
-```typescript
 import { pgTable, text, varchar, timestamp, uuid } from "drizzle-orm/pg-core";
 
 // Volunteers table - for Get Involved form submissions
@@ -20,4 +19,3 @@ export const ideas = pgTable("ideas", {
   suggestion: text("suggestion").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
-```
