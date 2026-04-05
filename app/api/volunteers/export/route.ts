@@ -14,10 +14,13 @@ export async function GET(request: NextRequest) {
     const rows = data.map(v => [
       v.id,
       `"${v.fullName}"`, // Quote strings to handle commas
-      v.phone,
-      v.email,
+            v.id,
+      `"${v.fullName}"`, 
+      v.phoneNumber,   // <-- FIXED THIS
+      v.emailAddress,  // <-- FIXED THIS (changing email to emailAddress)
       v.lga,
       v.supportType,
+
       v.createdAt?.toISOString() || ''
     ]);
 
