@@ -11,7 +11,6 @@ const heroImages = [
   "/images/araba-4.jpg", // Repeated to keep the 4-image cycle
 ];
 
-
 export default function About() {
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -55,11 +54,7 @@ export default function About() {
               Civil Engineer | Media Mogul | Social Impact Investor | Political Leader.
             </p>
             <p>
-              
-
-Engr.Femi Sanni, popularly known by the moniker "Araba," is a distinguished Nigerian engineer, multi-sector entrepreneur and philanthropist. With a career spanning over 35 years, Sanni has established himself as a bridge-builder between technical excellence and socio-economic transformation. 
-He is a COREN-registered engineer and a Fellow of the Nigerian Institution of Civil Engineers (FNICE).
-He is the Chairman of the STEFOLGA Group and the founder of Flow 92.7 FM in Ilorin, Kwara State.
+              Engr. Femi Sanni, popularly known by the moniker "Araba," is a distinguished Nigerian engineer, multi-sector entrepreneur and philanthropist. With a career spanning over 39 years, Sanni has established himself as a bridge-builder between technical excellence and socio-economic transformation. He is the Chairman of the STEFOLGA Group and the founder of Flow 92.7 FM in Ilorin, Kwara State.
             </p>
           </div>
 
@@ -67,10 +62,10 @@ He is the Chairman of the STEFOLGA Group and the founder of Flow 92.7 FM in Ilor
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-brand-black mb-4">Early Life & Education</h2>
             <p className="mb-4">
-              Born on September 4, 1964, Sanni’s passion for development was inherited from his father, who managed the defunct Tate and Lyle FC in Ilorin. He pursued his professional foundation at the University of Ilorin, where he earned a B.Eng. in Civil Engineering. He later expanded his horizons internationally, establishing business interests in Toronto, Canada, before returning to focus on Nigeria’s industrial and media landscapes.
+              Sanni grew up in the GRA, Ilorin with a strong love for football, a passion he inherited from his father who managed the defunct Tate and Lyle FC in Ilorin. He began his education at Bishop Smith Primary School, Ilorin and proceeded to Government Secondary School, Ilorin, before earning a B.Eng. in Civil Engineering from the University of Ilorin.
             </p>
             <p>
-              Before deepening his footprint in Nigeria, he established business roots in Canada through TECHNOplus Communications Inc. in Toronto, gaining global exposure that continues to influence his development approach.
+              Driven by a vision for development beyond borders, he later expanded his horizons internationally by establishing business interests in Toronto, Canada, through TECHNOplus Communications Inc., gaining global exposure that continues to shape his approach to development, industry and media. He subsequently returned to focus his energy on advancing Nigeria’s industrial and media landscapes.
             </p>
           </div>
 
@@ -98,14 +93,14 @@ He is the Chairman of the STEFOLGA Group and the founder of Flow 92.7 FM in Ilor
             <h2 className="text-2xl md:text-3xl font-bold text-brand-black mb-4 underline decoration-brand-red decoration-2 underline-offset-8">
               Social Impact & Philanthropy
             </h2>
-                        {/* THIS IS THE SPECIFIC PARAGRAPH YOU CIRCLED */}
+            
             <p className="mb-6 text-gray-700 leading-relaxed font-medium">
               Sanni is a major advocate for youth development, famously stating that:
               <span className="block mt-2 italic font-bold text-brand-black">
                 "Youths shouldn't wait for the perfect moment to start."
               </span>
             </p>
-
+            
             <ul className="space-y-4">
               <li>
                 <strong className="text-brand-black text-xl">• Sports:</strong> He chairs the Araba Football Club, a scouting and developmental platform for young athletic talent.

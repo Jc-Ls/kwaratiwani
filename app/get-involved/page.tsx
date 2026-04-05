@@ -24,7 +24,7 @@ export default function GetInvolved() {
             rel="noopener noreferrer"
             className="inline-block px-10 py-5 bg-brand-red text-white font-bold text-xl rounded-md hover:bg-red-700 transition-colors shadow-lg"
           >
-            Open Volunteer Form
+            Register
           </Link>
         </div>
 
