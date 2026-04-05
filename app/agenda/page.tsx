@@ -39,7 +39,7 @@ export default function Agenda() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-brand-black mb-6">
-            Kwara Ti Wa Ni in Action
+            Kwara TiWa Ni in Action
           </h1>
           <div className="h-1 w-24 bg-brand-red mx-auto"></div>
         </div>

@@ -1,54 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { submitIdea } from "../actions";
 
 export default function ShareIdeas() {
   const lgas = [
-    "Asa", "Baruten", "Edu", "Ekiti", "Ifelodun", "Ilorin East", "Ilorin South",
-    "Ilorin West", "Irepodun", "Isin", "Kaiama", "Moro", "Offa", "Oke Ero",
-    "Oyun", "Pategi"
+    "Asa", "Baruten", "Edu", "Ekiti", "Ifelodun", "Ilorin East", "Ilorin South", 
+    "Ilorin West", "Irepodun", "Isin", "Kaiama", "Moro", "Offa", "Oke Ero", 
+    "Oyun", "Patigi"
   ];
-
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    lga: "",
-    suggestion: "",
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setMessage(null);
-
-    try {
-      const response = await fetch("/api/ideas", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessage({ type: "success", text: "Thank you! Your idea has been submitted." });
-        setFormData({ name: "", lga: "", suggestion: "" });
-      } else {
-        setMessage({ type: "error", text: data.error || "Something went wrong. Please try again." });
-      }
-    } catch (error) {
-      setMessage({ type: "error", text: "Failed to submit. Please check your connection." });
-    } finally {
-      setLoading(false);
-    }
-  };
 
   async function clientAction(formData: FormData) {
     const response = await submitIdea(formData);
@@ -75,35 +34,17 @@ export default function ShareIdeas() {
         </div>
 
         <div className="bg-white p-8 md:p-10 rounded-xl shadow-lg border border-gray-100">
-          {message && (
-            <div className={`p-4 mb-6 rounded-md ${message.type === "success" ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800"}`}>
-              {message.text}
-            </div>
-          )}
-
-          <form onSubmit={handleSubmit} action={clientAction} className="space-y-6">
-
+          <form action={clientAction} className="space-y-6">
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Name <span className="text-gray-400 font-normal">(Optional)</span></label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  placeholder="Anonymous"
-                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red transition-all"
-                />
+                <input type="text" name="name" placeholder="Anonymous" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red transition-all" />
               </div>
 
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Local Government Area</label>
-                <select
-                  name="lga"
-                  value={formData.lga}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red bg-white transition-all"
-                  required>
+                <select name="lga" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red bg-white transition-all" required>
                   <option value="">Select your LGA...</option>
                   {lgas.map(lga => <option key={lga} value={lga}>{lga}</option>)}
                 </select>
@@ -112,22 +53,17 @@ export default function ShareIdeas() {
 
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-2">Your question or suggestion</label>
-              <textarea
+              <textarea 
                 name="suggestion"
-                rows={6}
-                value={formData.suggestion}
-                onChange={handleInputChange}
-                placeholder="I believe we should focus on..."
-                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red transition-all resize-y"
+                rows={6} 
+                placeholder="I believe we should focus on..." 
+                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red transition-all resize-y" 
                 required
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-4 mt-4 bg-brand-black text-white font-bold text-lg rounded-md hover:bg-gray-800 transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed">
-              {loading ? "Submitting..." : "Submit Idea"}
+            <button type="submit" className="w-full py-4 mt-4 bg-brand-black text-white font-bold text-lg rounded-md hover:bg-gray-800 transition-colors shadow-md">
+              Submit
             </button>
           </form>
         </div>

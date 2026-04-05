@@ -46,7 +46,7 @@ export default function Home() {
         
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg">
-          Kwara Ti Wa Ni
+          Kwara TiWa Ni
         </h1>
 
         {/* Subtext */}
@@ -57,7 +57,7 @@ export default function Home() {
         {/* Name Line */}
         <div className="inline-block border-y-2 border-brand-red py-4 my-8 bg-black/30 px-6 rounded-md backdrop-blur-sm">
           <p className="text-lg md:text-xl font-bold tracking-widest text-white uppercase drop-shadow-sm">
-            Engr. Olufemi Sanni, FNICE, FNSE — <span className="text-brand-red">ARABA</span>
+            Engr. Femi Sanni, FNICE, FNSE — <span className="text-brand-red">ARABA</span>
           </p>
         </div>
 
@@ -67,13 +67,13 @@ export default function Home() {
             href="/about" 
             className="px-8 py-4 bg-white text-brand-black font-bold rounded-md hover:bg-gray-200 transition-colors w-full shadow-lg"
           >
-            Read His Story
+            About
           </Link>
           <Link 
             href="/agenda" 
             className="px-8 py-4 bg-brand-red text-white font-bold rounded-md hover:bg-red-700 transition-colors w-full shadow-lg"
           >
-            His Agenda for Kwara
+            Agenda
           </Link>
           <Link 
             href="/get-involved" 
@@ -85,7 +85,7 @@ export default function Home() {
             href="/share-ideas" 
             className="px-8 py-4 border-2 border-brand-red text-brand-red font-bold rounded-md hover:bg-brand-red/10 bg-black/40 transition-colors w-full backdrop-blur-sm"
           >
-            Share Your Ideas
+            Questions and Suggestion
           </Link>
         </div>
 
