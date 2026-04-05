@@ -87,7 +87,7 @@ export default function Home() {
             href="/share-ideas" 
             className="px-8 py-4 border-2 border-brand-red text-brand-red font-bold rounded-md hover:bg-brand-red/10 bg-black/40 transition-colors w-full backdrop-blur-sm"
           >
-            Questions and Suggestion
+            Questions and Suggestions
           </Link>
         </div>
 

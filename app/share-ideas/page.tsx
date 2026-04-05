@@ -29,7 +29,7 @@ export default function ShareIdeas() {
             Your Voice <span className="text-brand-red relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-1 after:bg-brand-red after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Matters</span>
           </h1>
           <p className="text-lg text-gray-600 font-medium max-w-2xl mx-auto">
-            What should the next Governor of Kwara focus on in your area? Share your questions, suggestions, and ideas.
+            What should the next Governor of Kwara State focus on in your area? Share your questions, suggestions, and ideas.
           </p>
         </div>
 

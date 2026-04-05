@@ -94,8 +94,9 @@ export default function About() {
             <h2 className="text-2xl md:text-3xl font-bold text-brand-black mb-4 underline decoration-brand-red decoration-2 underline-offset-8">
               Social Impact & Philanthropy
             </h2>
-            <p className="mb-6 italic text-gray-600 border-l-2 border-gray-300 pl-4">
-              Sanni is a major advocate for youth development, famously stating that "Youths shouldn't wait for the perfect moment to start."
+            {/* THIS IS THE SPECIFIC PARAGRAPH YOU CIRCLED */}
+            <p className="mb-6 text-gray-700 leading-relaxed font-medium">
+              Sanni is a major advocate for youth development, famously stating that <span className="italic">"Youths shouldn't wait for the perfect moment to start."</span>
             </p>
             <ul className="space-y-4">
               <li>
