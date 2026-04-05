@@ -47,16 +47,17 @@ export default function About() {
         
         <div className="space-y-10 text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
           
-          {/* Intro Section */}
+                    {/* Intro Section */}
           <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-red">
             <p className="text-xl md:text-2xl font-bold text-brand-black mb-4 leading-snug">
               Engr. Femi Sanni <span className="text-brand-red">(ARABA)</span> — <br className="hidden md:block" />
               Civil Engineer | Media Mogul | Social Impact Investor | Political Leader.
             </p>
             <p>
-              Engr. Femi Sanni, popularly known by the moniker "Araba," is a distinguished Nigerian engineer, multi-sector entrepreneur and philanthropist. With a career spanning over 39 years, Sanni has established himself as a bridge-builder between technical excellence and socio-economic transformation. He is the Chairman of the STEFOLGA Group and the founder of Flow 92.7 FM in Ilorin, Kwara State.
+              Engr. Femi Sanni, popularly known by the moniker "Araba," is a distinguished Nigerian engineer, multi-sector entrepreneur and philanthropist. With a career spanning over 39 years, Sanni has established himself as a bridge-builder between technical excellence and socio-economic transformation. He is a COREN-registered engineer and a Fellow of the Nigerian Institution of Civil Engineers (FNICE). He is the Chairman of the STEFOLGA Group and the founder of Flow 92.7 FM in Ilorin, Kwara State.
             </p>
           </div>
+
 
           {/* Early Life & Education */}
           <div>
