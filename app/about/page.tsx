@@ -62,7 +62,7 @@ export default function About() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-brand-black mb-4">Early Life & Education</h2>
             <p className="mb-4">
-              Sanni grew up in the GRA, Ilorin with a strong love for football, a passion he inherited from his father who managed the defunct Tate and Lyle FC in Ilorin. He began his education at Bishop Smith Primary School, Ilorin and proceeded to Government Secondary School, Ilorin, before earning a B.Eng. in Civil Engineering from the University of Ilorin.
+              Sanni grew up in GRA, Ilorin with a strong love for football, a passion he inherited from his father who managed the defunct Tate and Lyle FC in Ilorin. He began his education at Bishop Smith Primary School, Ilorin and proceeded to Government Secondary School, Ilorin, before earning a B.Eng. in Civil Engineering from the University of Ilorin.
             </p>
             <p>
               Driven by a vision for development beyond borders, he later expanded his horizons internationally by establishing business interests in Toronto, Canada, through TECHNOplus Communications Inc., gaining global exposure that continues to shape his approach to development, industry and media. He subsequently returned to focus his energy on advancing Nigeria’s industrial and media landscapes.
