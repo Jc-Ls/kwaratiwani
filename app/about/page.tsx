@@ -51,11 +51,11 @@ export default function About() {
           {/* Intro Section */}
           <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-red">
             <p className="text-xl md:text-2xl font-bold text-brand-black mb-4 leading-snug">
-              Engr. Olufemi Sanni <span className="text-brand-red">(ARABA)</span> — <br className="hidden md:block" />
+              Engr. Femi Sanni <span className="text-brand-red">(ARABA)</span> — <br className="hidden md:block" />
               Civil Engineer | Media Mogul | Social Impact Investor | Political Leader.
             </p>
             <p>
-              Engr. Olufemi Sanni, popularly known by the moniker "Araba," is a distinguished Nigerian engineer, multi-sector entrepreneur and philanthropist. With a career spanning over 35 years, Sanni has established himself as a bridge-builder between technical excellence and socio-economic transformation. He is the Chairman of the STEFOLGA Group and the founder of Flow 92.7 FM in Ilorin, Kwara State.
+              Engr.Femi Sanni, popularly known by the moniker "Araba," is a distinguished Nigerian engineer, multi-sector entrepreneur and philanthropist. With a career spanning over 35 years, Sanni has established himself as a bridge-builder between technical excellence and socio-economic transformation. He is the Chairman of the STEFOLGA Group and the founder of Flow 92.7 FM in Ilorin, Kwara State.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export default function About() {
             </h2>
             {/* THIS IS THE SPECIFIC PARAGRAPH YOU CIRCLED */}
             <p className="mb-6 text-gray-700 leading-relaxed font-medium">
-              Sanni is a major advocate for youth development, famously stating that <span className="italic">"Youths shouldn't wait for the perfect moment to start."</span>
+              Sanni is a major advocate for youth development, famously stating that<br> <span className="italic">"Youths shouldn't wait for the perfect moment to start."</span>
             </p>
             <ul className="space-y-4">
               <li>
