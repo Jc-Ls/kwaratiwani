@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const heroImages = [
-  "/images/araba-1.jpg",
-  "/images/araba-2.jpg",
+  // "/images/araba-1.jpg",
+  // "/images/araba-2.jpg",
   "/images/araba-3.jpg",
   "/images/araba-4.jpg",
+  "/images/araba-3.jpg", // Repeated to keep the 4-image cycle
+  "/images/araba-4.jpg", // Repeated to keep the 4-image cycle
 ];
 
 export default function Home() {

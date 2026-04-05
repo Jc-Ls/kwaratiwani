@@ -68,14 +68,12 @@ export default function GetInvolved() {
     <div className="min-h-screen bg-brand-gray py-16 md:py-24 px-6">
       <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-sm border-t-4 border-t-brand-red">
         
-        <div className="text-center mb-10">
+                <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-brand-black mb-4">
             Be Part of the <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-600 animate-pulse">Movement</span>
           </h1>
-          <p className="text-lg text-gray-600 font-medium">
-            Join others who want to contribute their time, skills, and voice toward a better Kwara.
-          </p>
         </div>
+
 
         {/* Messages */}
         {message && (
