@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { submitVolunteer } from "../actions";
 
 export default function GetInvolved() {
   const lgas = [
@@ -51,11 +51,22 @@ export default function GetInvolved() {
     }
   };
 
+  // This function intercepts the form submission to run our Server Action
+  async function clientAction(formData: FormData) {
+    const response = await submitVolunteer(formData);
+    
+    if (response.success) {
+      alert("Application submitted successfully! Welcome to the movement.");
+      document.querySelector("form")?.reset(); // Clears the form after success
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  }
+
   return (
     <div className="min-h-screen bg-brand-gray py-16 md:py-24 px-6">
       <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-sm border-t-4 border-t-brand-red">
-
-        {/* Transforming / Dynamic Heading */}
+        
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-brand-black mb-4">
             Be Part of the <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-600 animate-pulse">Movement</span>
@@ -73,7 +84,7 @@ export default function GetInvolved() {
         )}
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} action={clientAction} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-2">Full Name</label>

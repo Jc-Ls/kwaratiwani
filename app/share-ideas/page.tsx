@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitIdea } from "../actions";
 
 export default function ShareIdeas() {
   const lgas = [
@@ -49,11 +50,21 @@ export default function ShareIdeas() {
     }
   };
 
+  async function clientAction(formData: FormData) {
+    const response = await submitIdea(formData);
+    
+    if (response.success) {
+      alert("Thank you! Your voice has been heard.");
+      document.querySelector("form")?.reset();
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  }
+
   return (
     <div className="min-h-screen bg-brand-white py-16 md:py-24 px-6">
       <div className="max-w-3xl mx-auto">
-
-        {/* Transforming / Dynamic Heading */}
+        
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-brand-black mb-4">
             Your Voice <span className="text-brand-red relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-1 after:bg-brand-red after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Matters</span>
@@ -63,16 +74,14 @@ export default function ShareIdeas() {
           </p>
         </div>
 
-        {/* Form */}
         <div className="bg-white p-8 md:p-10 rounded-xl shadow-lg border border-gray-100">
-          {/* Messages */}
           {message && (
             <div className={`p-4 mb-6 rounded-md ${message.type === "success" ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800"}`}>
               {message.text}
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} action={clientAction} className="space-y-6">
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -101,7 +110,6 @@ export default function ShareIdeas() {
               </div>
             </div>
 
-            {/* Question / Suggestion */}
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-2">Your question or suggestion</label>
               <textarea
