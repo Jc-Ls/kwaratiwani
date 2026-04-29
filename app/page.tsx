@@ -30,7 +30,7 @@ export default function Home() {
       {/* Background Image Carousel */}
       {heroImages.map((src, index) => (
         <div
-          key={src}
+          key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out bg-no-repeat bg-center ${
             index === currentImage ? "opacity-100" : "opacity-0"
           } bg-contain md:bg-cover`}
